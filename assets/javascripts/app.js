@@ -279,9 +279,6 @@ jQuery(document).ready(function ($) {
             new videoModule(id);
         });
         
-//        new videoModule('video1');
-//        new videoModule('video2');
-        
         $('.slide').elastislide({
             imageW  : 139,
             margin  : 18
