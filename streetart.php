@@ -4,7 +4,7 @@ $body_class = 'featured';
 $name       = 'STREET ART';
 ?>
 <?php include("includes/_header.php"); ?>
-	<div id="video1" class="mod-wrapper">
+	<div id="video1" class="mod-wrapper video-module">
 		<header class="row">
 			<ul>
 				<li><?= $page_title ?></li>
@@ -188,7 +188,7 @@ $name       = 'STREET ART';
 	</div>
 	<!-- /Downloads -->
 
-	<div id="video2" class="mod-wrapper">
+	<div id="video2" class="mod-wrapper video-module">
 		<header class="row">
 			<ul>
 				<li><?= $page_title ?></li>

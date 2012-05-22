@@ -273,8 +273,14 @@ jQuery(document).ready(function ($) {
             
         }
         
-        new videoModule('video1');
-        new videoModule('video2');
+        // get all the video modules and create new modules
+        $('.video-module').each(function(index) {
+            var id = $(this).attr('id');
+            new videoModule(id);
+        });
+        
+//        new videoModule('video1');
+//        new videoModule('video2');
         
         $('.slide').elastislide({
             imageW  : 139,
