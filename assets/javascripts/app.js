@@ -221,7 +221,7 @@ jQuery(document).ready(function ($) {
                 }
             }
             
-        }
+        };
         
         
         
@@ -271,9 +271,9 @@ jQuery(document).ready(function ($) {
                 
             });
             
-        }
+        };
         
-        // get all the video modules and create new modules
+        // instantiate new video modules
         $('.video-module').each(function(index) {
             var id = $(this).attr('id');
             new videoModule(id);

@@ -4,47 +4,31 @@ $body_class = 'featured';
 $name       = 'STREET ART';
 ?>
 <?php include("includes/_header.php"); ?>
-	<div id="video1" class="mod-wrapper video-module">
-		<header class="row">
-			<ul>
-				<li><?= $page_title ?></li>
-				<li class="current">Videos</li>
-				<li>Photos</li>
-				<li>Jeff Soto Bio</li>
-				<li>Downloads</li>
-				<li>Urban Art Series</li>
-			</ul>
-		</header>
-		<div class="mod-inner row"> 	
-                    <section>
-                            <h1>Sonic's first Street Art. See the newest stunt.</h1>
-                            <p>Sonic kept its wheels on the ground for this stunt. Teaming up with world-famous muralist and street artist Jeff Soto,
-                             Sonic got in touch with its inner artist. Follow us on <a href="http://www.twitter.com/chevylife" target="_blank">Twitter</a> and like us on <a href="http://www.facebook.com/chevysonic" target="_blank">Facebook</a> for more updates.</p>
-                    </section>
 
-                    <section class="video-container">
+<?php
 
+    $head1 = <<<HEAD_ONE
                         <ul>
-                            <li class="video-loading"></li>
-                            <li class="video-panel panel1 video-active"><div id="msH2Xz8xM0E"></div></li>
-                            <li class="video-panel panel2"><div id="MBjUsOz7oLQ"></div></li>
-                            <li class="video-panel panel3"><div id="dm1QuT72I7Q"></div></li>
-                            <li class="video-panel panel4"><div id="Sxd_OX3Au0U"></div></li>
-                            <li class="video-panel panel5"><div id="c62XQ3Kijck"></div></li>
-                        </ul>
-
+                            <li>$page_title</li>
+                            <li class="current">Videos</li>
+                            <li>Photos</li>
+                            <li>Jeff Soto Bio</li>
+                            <li>Downloads</li>
+                            <li>Urban Art Series</li>
+			</ul>
+HEAD_ONE;
+    
+    $intro1 = <<<INTRO_ONE
+                    <section>
+                        <h1>Sonic's first Street Art. See the newest stunt.</h1>
+                        <p>Sonic kept its wheels on the ground for this stunt. Teaming up with world-famous muralist and street artist Jeff Soto,
+                            Sonic got in touch with its inner artist. Follow us on <a href="http://www.twitter.com/chevylife" target="_blank">Twitter</a> and like us on <a href="http://www.facebook.com/chevysonic" target="_blank">Facebook</a> for more updates.</p>
                     </section>
-                    
-                    <section class="social">
-                        <ul class="social-buttons row">
-                            <li class="facebook"><a href="javascript:goFB();"><span>&emsp;&emsp;&emsp;</span></a></li>
-                            <li class="twitter"><a href="javascript:goTW();"><span>&emsp;&emsp;&emsp;</span></a></li>
-                            <li class="google"><g:plusone href="http://www.letsdothis.com/#videos" callBack="gClicked" annotation="none"></g:plusone></li>
-                        </ul>
-                    </section>
-                    
-                    <nav class="video-nav es-carousel-wrapper">
-                        <div class="es-carousel">
+INTRO_ONE;
+    
+    $vids1 = array('msH2Xz8xM0E', 'MBjUsOz7oLQ', 'dm1QuT72I7Q', 'Sxd_OX3Au0U', 'c62XQ3Kijck');
+    
+    $navlinks1 = <<<NAV_ONE
                             <ul class="navlinks">
                                 <li class="active"><a href="#1" data-finder="panel1"><img src="assets/images/streetart/video1/vidThumb6.jpg"></a><span>Street Art Video</span></li>
                                 <li><a href="#5"  data-finder="panel5"><img src="assets/images/streetart/video1/vidThumb7.jpg"></a><span>Behind the Scenes</span></li>
@@ -52,11 +36,11 @@ $name       = 'STREET ART';
                                 <li><a href="#3"  data-finder="panel3"><img src="assets/images/streetart/video1/vidThumb2.jpg"></a><span>Street Art Sprayer</span></li>
                                 <li><a href="#4"  data-finder="panel4"><img src="assets/images/streetart/video1/vidThumb3.jpg"></a><span>Street Art Turret</span></li>
                             </ul>
-                        </div>
-                    </nav>
-		</div>
-	</div>
-	<!-- /Video Gallery -->
+NAV_ONE;
+    
+        $v1 = new VideoModule($head1, $intro1, $vids1, $navlinks1);
+        echo $v1->getVideos();
+?>
         
 	<div class="mod-wrapper photo-gallery">
 		<header class="row">
@@ -187,50 +171,30 @@ $name       = 'STREET ART';
 		</div>
 	</div>
 	<!-- /Downloads -->
+        
+<?php
 
-	<div id="video2" class="mod-wrapper video-module">
-		<header class="row">
-			<ul>
-				<li><?= $page_title ?></li>
-				<li>Videos</li>
-				<li>Photos</li>
-				<li>Jeff Soto Bio</li>
-				<li>Downloads</li>
-				<li class="current">Urban Art Series</li>
-			</ul>
-		</header>
-		<div class="mod-inner row"> 	
-                    <section>
-                            <h1>Urban Art Series</h1>
-                            <p>Urban artists and athletes joined together for a unique Sonic First. This time, instead of Sonic doing the painting, Sonic was the canvas.</p>
-                    </section>
-
-                    <section class="video-container">
-
+    $head2 = <<<HEAD_TWO
                         <ul>
-                            <li class="video-loading"></li>
-                            <li class="video-panel panel1 video-active"><div id="Jr_IltfdFcU"></div></li>
-                            <li class="video-panel panel2"><div id="_BS4bnAV3rw"></div></li>
-                            <li class="video-panel panel3"><div id="-LXrOrqse8A"></div></li>
-                            <li class="video-panel panel4"><div id="M6hDi5UeNUY"></div></li>
-                            <li class="video-panel panel5"><div id="OX3ciXOZ_8o"></div></li>
-                            <li class="video-panel panel6"><div id="j__PxTXavrQ"></div></li>
-                            <li class="video-panel panel7"><div id="KqUAWqSdKoQ"></div></li>
-                            <li class="video-panel panel8"><div id="y4JEjF4k_LY"></div></li>    
-                        </ul>
-
+                            <li>$page_title</li>
+                            <li>Videos</li>
+                            <li>Photos</li>
+                            <li>Jeff Soto Bio</li>
+                            <li>Downloads</li>
+                            <li class="current">Urban Art Series</li>
+			</ul>
+HEAD_TWO;
+    
+    $intro2 = <<<INTRO_TWO
+                    <section>
+                        <h1>Urban Art Series</h1>
+                        <p>Urban artists and athletes joined together for a unique Sonic First. This time, instead of Sonic doing the painting, Sonic was the canvas.</p>
                     </section>
-                    
-                    <section class="social">
-                        <ul class="social-buttons row">
-                            <li class="facebook"><a href="javascript:goFB();"><span>&emsp;&emsp;&emsp;</span></a></li>
-                            <li class="twitter"><a href="javascript:goTW();"><span>&emsp;&emsp;&emsp;</span></a></li>
-                            <li class="google"><g:plusone href="http://www.letsdothis.com/#videos" callBack="gClicked" annotation="none"></g:plusone></li>
-                        </ul>
-                    </section>
-                    
-                    <nav class="video-nav es-carousel-wrapper slide">
-                        <div class="es-carousel">
+INTRO_TWO;
+    
+    $vids2 = array('Jr_IltfdFcU', '_BS4bnAV3rw', '-LXrOrqse8A', 'M6hDi5UeNUY', 'OX3ciXOZ_8o', 'j__PxTXavrQ', 'KqUAWqSdKoQ', 'y4JEjF4k_LY');
+    
+    $navlinks2 = <<<NAV_TWO
                             <ul class="navlinks">
                                 <li class="active"><a href="#1" data-finder="panel1"><img src="assets/images/streetart/video2/vidThumb1.jpg"></a><span>Urban Art 1.1</span></li>
                                 <li><a href="#2"  data-finder="panel2"><img src="assets/images/streetart/video2/vidThumb2.jpg"></a><span>Urban Art 1.2</span></li>
@@ -241,12 +205,11 @@ $name       = 'STREET ART';
                                 <li><a href="#7"  data-finder="panel7"><img src="assets/images/streetart/video2/vidThumb7.jpg"></a><span>Urban Art 4.1</span></li>
                                 <li><a href="#8"  data-finder="panel8"><img src="assets/images/streetart/video2/vidThumb8.jpg"></a><span>Urban Art 4.2</span></li>
                             </ul>
-                        </div>
-                    </nav>
-		</div>
-	</div>
-	<!-- /Video Gallery -->
-
+NAV_TWO;
+    
+        $v2 = new VideoModule($head2, $intro2, $vids2, $navlinks2);
+        echo $v2->getVideos();
+?>
 
 	<!-- SiteCatalyst code version: H.22.1.
 	Copyright 1996-2011 Adobe, Inc. All Rights Reserved

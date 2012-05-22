@@ -1,6 +1,7 @@
 <?php
     // require config file
     require_once dirname(dirname(__FILE__)) . '/config.php';
+    require_once 'lib/video.php';
 ?>
 <!doctype html>
 <html>
