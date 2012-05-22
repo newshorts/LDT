@@ -10,4 +10,8 @@ The process goes like this. Master is always at a ready state, its the branch th
 and upgrades are created and merged after successful test and launch.
 
 
+<<<<<<< HEAD
+Using netbeans as IDE for this.
+=======
 This is a test.
+>>>>>>> test
