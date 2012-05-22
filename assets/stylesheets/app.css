@@ -1,0 +1,409 @@
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Global Styles
+:: Helper Classes
+:: Shared Styles
+	:: Modules
+	:: Carousels
+
+// Campaign Specifics
+:: Bungee
+:: OKGO
+:: Dyrdek
+:: Claw 
+*/
+	
+
+	/* -----------------------------------------
+	   TYPOGRAPHY / Globals
+	----------------------------------------- */
+	@font-face {
+	    font-family: 'Louis';
+	    src: url('fonts/louiscondenseddemi-webfont.eot');
+	    src: url('fonts/louiscondenseddemi-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/louiscondenseddemi-webfont.woff') format('woff'),
+	         url('fonts/louiscondenseddemi-webfont.ttf') format('truetype'),
+	         url('fonts/louiscondenseddemi-webfont.svg#LouisCondensedDemi') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	body 	{ background:#ededed; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; line-height: 18px; color: #858585; position: relative; -webkit-font-smoothing: antialiased; }
+	h1		{ font: bold 34px/34px Arial; /*letter-spacing: -1px;*/ white-space: pre; color: #FF6C05; }
+	p       { font: 16px/1.5 Arial; white-space: pre-line; color: #858585; }
+	h1, p	{ padding: 0; margin: 0 0 12px 0; }
+	ol, ul  { list-style: none outside; margin:0; padding:0; }
+	a 		{ color: #2a85e8; text-decoration: none; line-height: inherit; }
+	a:hover { color: #11639d; transition:all 0.2s ease-out;}
+	a:focus { color: #cc4714; outline: none; }
+	.anythingSlider{ margin:0 auto; }
+	.kerningTight{letter-spacing: -1px;}
+	.row{ min-width:980px; }
+	/* -----------------------------------------
+	   Helper Classes
+	----------------------------------------- */
+	.left        { float: left; }
+	.right       { float: right; }
+	.text-left   { text-align: left; }
+	.text-right  { text-align: right; }
+	.text-center { text-align: center; }
+	.hide        { display: none; }
+	.highlight   { background: #ff0; }
+	.hide-text   { text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+	.mod-wrapper header, 
+	#sonic_link, 
+	.downloads li a{ font: normal 16px 'Louis'; text-transform: uppercase; }
+
+	#mod-wrapper-top img, #sonic_link a, #ldt-flag{ position: absolute; }
+	
+	#mod-wrapper-top header,
+	.mod-wrapper header{
+		box-shadow:0px 0px 10px 5px rgba(41, 41, 41, 0.1);
+		background:#fff;
+		margin-bottom:0;
+		z-index: 1;
+	}
+	.mod-inner li{ display: inline; }
+
+	/* -----------------------------
+	   :: First Module
+	----------------------------- */
+	#mod-wrapper-top { margin-top: -33px; }
+	#mod-wrapper-top header{ position: relative; height:196px; }	
+	#mod-wrapper-top img{ top:0; left: 0; }
+	#ldt-flag{
+		background: url(img/the_sprite.png) no-repeat 0 -50px;	
+		height: 193px;
+		width: 356px;
+		left: -22px;
+		top: -9px;
+	}
+	#mod-wrapper-top .mod-inner section{ padding:17px; margin:0; }
+	#mod-wrapper-top .mod-inner section.three{ padding: 0; }
+	#mod-wrapper-top section#social1{ padding: 0;}
+	#sonic_link{ 
+		background: url(img/sonic-car-3.png) no-repeat 100% 60%;
+		padding-right: 0;
+		min-height:100%;	
+		height:155px;
+		right:30px;	
+	}
+	#sonic_link a,
+	.downloads li a{ 
+		background: #777;
+		padding:3px 6px;
+		color: #fff;
+		left:20%;
+		top:93%;
+	}
+	#sonic_link a:hover,
+	.downloads li a:hover{ color: #F60; }
+
+	/* -----------------------------
+	   :: Secondary Modules
+	----------------------------- */
+	.mod-wrapper 		{ margin-top: 20px; }	
+	.mod-wrapper p 		{ margin-bottom:0; }
+	.mod-wrapper header {
+		background:#fff linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+	}	
+	.mod-wrapper header li{ 
+		padding:11px 17px; 
+		color: #6f6f6f;
+		float:left;
+		margin: 0;
+	}
+
+
+	.mod-wrapper header li.current{color: #f60;}
+	.mod-wrapper section{
+		padding:17px 17px 0 17px; 
+		margin:0;
+		position:relative;
+	}
+	.gallery section{
+			padding:17px; 
+	}
+	div.mod-inner,
+	.mod-inner-chall{
+		box-shadow:0px 0px 20px 7px rgba(41, 41, 41, 0.1);
+		background:#fff;
+		z-index: 2;
+	}
+
+	/* -----------------------------------------
+	   Carousel Base
+	----------------------------------------- */	
+	.es-carousel-wrapper			{ padding:17px 65px; position:relative; }
+	.es-carousel 					{ overflow:hidden; }
+/*	.es-carousel ul       			{ display:none; }*/
+	.es-carousel ul li  a			{ border: 1px solid #dadada; margin-bottom:3px; }
+	.es-carousel ul li a img    	{ border:none; }
+	
+	.es-carousel ul li,
+	.es-carousel ul li  a,
+	.es-carousel ul li a img		{ display:block; }
+
+
+	.es-carousel2 					{ overflow:hidden; }
+	.es-carousel2 ul       			{ display:none; }
+	.es-carousel2 ul li  a			{ border: 1px solid #dadada; margin-bottom:3px; }
+	.es-carousel2 ul li a img    	{ border:none; }
+	
+	.es-carousel2 ul li,
+	.es-carousel2 ul li  a,
+	.es-carousel2 ul li a img		{ display:block; }
+
+
+	.es-nav span.es-nav-prev,
+	.es-nav span.es-nav-next{
+		text-indent:-9000px;
+		position:absolute;
+		margin-top:-13px;
+		cursor:pointer;
+		height:38px;
+		width:38px;
+		opacity:1;
+		top:50%; 
+	} 
+	.es-nav span.es-nav-prev{
+		background:transparent url(img/slide_Btns.png) no-repeat top left;
+		left:0;
+	}
+	.es-nav span.es-nav-next{ 
+		background:transparent url(img/slide_Btns.png) no-repeat top right;
+		right:0; 
+	}
+	.es-nav span.es-nav-prev:hover	{ background-position: -38px 0px; /*transition:all 0.5s ease-out;*/}
+	.es-nav span.es-nav-next:hover	{ background-position: -76px 0px; /*transition:all 0.5s ease-out;*/}
+	.es-nav span:hover				{ opacity:1.0; }
+	
+	.es-carousel ul li,
+	.es-carousel2 ul li,
+	.photo-gallery nav ul li,
+	.map-gallery nav ul li{ 
+		font: bold 14px/1.5 Arial, sans-serif;
+		border: 1px solid #dadada;
+		padding: 8px 8px 4px 8px;
+		margin-bottom: 0;  
+		height:100%;
+		float:left; 
+	}
+	.photos{
+		width:940px;
+		height:610px;
+	}
+	/* -------------------------------------
+	   :: Site Nav + Shared Carousel Style
+	------------------------------------- */
+	.mod-inner nav li:hover		{ background:#F60; color:#fff; transition:all 0.2s ease-out;}
+	.active						{ background:#F60; color:#fff; }
+	.mod-inner nav li a 		{ width:175px; height:128px; margin-bottom:4px; }
+
+
+	/* -----------------------------
+	   :: Video Module + Carousel
+	----------------------------- 
+		:: Base 
+	*/
+	.video-gallery .es-carousel-wrapper 	{ padding:13px 70px; }
+	.video-gallery nav li                   { padding: 6px 6px 0 6px;}
+	.video-gallery nav li  a, 
+	.video-gallery nav li  a img	        { max-width:139px; max-height:105px; min-width:139px; min-height:105px; }
+        
+        /* -----------------------------------------
+	   Carousel Mike's Additions (5.15.12)
+	----------------------------------------- */
+        
+            nav.video-nav                       { padding: 13px 17px 26px; display: block; }
+            
+            .mod-inner nav.video-nav ul li a    { width:139px; height:105px; margin-bottom:4px; }
+            
+            .video-nav .navlinks                { height: 140px; min-width: 946px; }
+            
+            .video-nav li                       { margin-right: 15px; width: 142px; padding: 8px 8px 0; border: 1px solid #DADADA; font: bold 14px/1.5 Arial,sans-serif; float: left; height: 100%; margin-bottom: 0; }
+            
+            .video-nav li img                   { display: block; border: 1px solid #DADADA; }
+            
+            .video-nav li span                  { position: relative; top: 4px; left: 1px; }
+            
+            .video-container ul                 { position: relative; width: 940px; padding: 17px 17px 0; height: 506px; }
+            
+            .video-container li                 { position: absolute; top: 0; left: 0; }
+            
+            .video-container .video-loading     { width: 940px; height: 508px; background: url(img/loading.gif) 460px 240px scroll no-repeat black; }
+            
+            .video-container iframe             { opacity: 0; -webkit-transition: opacity .8s ease; -moz-transition: opacity .8s ease; -o-transition: opacity .8s ease; transition: opacity .8s ease; }
+            
+            .video-container .video-active      { z-index: 10; }
+            
+            .video-panel                        { z-index: 1; }
+
+	/* ----------------------------- 
+		:: Page specific Styles
+	--------------------------
+	*/
+	body.test-featured .video-gallery .es-carousel-wrapper,
+	body.featured .video-gallery .es-carousel-wrapper,
+	body.okgo .video-gallery .es-carousel-wrapper,
+  body.skydive .video-gallery .es-carousel-wrapper{ padding:13px 17px;/*If there are few to many thumbs*/ }
+	body.anthem section#social2,
+	body.claw section#social2{ padding-bottom:24px; }
+
+	#bestof-nav-wrap section{ padding: 0 17px 17px 17px; }
+	#gameTabs li, 
+	#gameTabs li a img{ padding:0; border:none; }
+	#gameTabs li a{ padding:4px;}
+	#gameTabs li a:hover{background: #F60;}
+
+	#video_okgo, #video_okgo2, #photo_okgo{
+		overflow-x: hidden;
+		overflow-y: auto;
+		list-style: none;
+		height: 506px;
+		width: 940px;
+	}
+	#video_okgo, #video_okgo2{min-height:506px;}
+	#photo_okgo{  
+		height: 610px;
+	}
+	#photo_okgo img{ min-width:940px; }
+
+	/* -----------------------------------------
+	   :: Photo Gallery / Map Gallery
+	----------------------------------------- */
+	.video-gallery header li:first-child,
+	.photo-gallery header li:first-child,
+	.gallery   header li:first-child,
+	.downloads header li:first-child{
+		background: #959595;
+		background: linear-gradient(top, #959595 0%,#6f6f6f 100%);
+		color: #fff;
+	}
+	.photo-gallery nav, 
+	.map-gallery nav{ margin:17px; }
+
+	.photo-gallery nav ul li, 
+	.map-gallery nav ul li{ 
+		display: inline-block;
+		margin: 0 5px 12px 6px;  
+		padding: 7px 7px 2px 7px;
+		height: 100%;
+	}
+	.photo-gallery nav ul li a img{ 
+		min-height:102px; 
+		max-height:102px; 
+		margin-bottom:0; 
+	}
+
+	.map-gallery h1{letter-spacing: -1px;}
+	.map-gallery nav ul li a img{} 
+	#map_okgo{
+		overflow-x: hidden;
+		overflow-y: auto;
+		list-style: none;
+		height: 610px;
+		width: 920px;
+		margin-bottom:17px;
+	}
+	span.modified{
+		position:absolute;
+		right:20px;
+		bottom:-25px;
+		color: #858585;
+	}
+	.map-gallery span.modified{right:30px;}
+	#mapThumbs{margin-top:30px;}
+
+/*	.video-wrapper{min-height:540px;}*/
+	.downloads img {		border: 1px solid #dadada; padding:7px; margin:12px 12px 12px 0;}
+	.downloads ul.column{margin-left: 0;}
+	.downloads h1{margin-bottom:10px;}
+	.downloads h1 span{font-size:16px; line-height:0;}
+	.downloads li{font-size:16px;}
+	.downloads li a{ padding: 3px 35px; margin-right:53px;}
+	.okgo .downloads section ul,
+	section.song{margin-bottom:24px;}
+		.song li a{ float:right; margin-right:13%; }
+		.song li a#bandLink{
+			float:none; 
+			margin:0; 
+		 	background:none; 
+		 	padding: 0 4px; 
+		 	color: #FF6C05;
+		 	font: 16px/2 Arial;
+		 	text-transform: capitalize;
+		 }
+		 .song li a#bandLink:hover{
+		 	opacity: 0.5;
+		 	-moz-opacity: 0.5;
+		 	filter:alpha(opacity=5);
+		 }
+	/* -----------------------------------------
+	   :: Social Buttons 
+	----------------------------------------- 
+	   :: Base
+	*/
+	.social-buttons { position: relative; }
+	.social-buttons li{ display: inline-block; padding: 0; margin-right:10px; }
+	.social-buttons a{ height:20px; width:55px; display: block; }
+	.social-buttons .twitter { height:20px; width:55px; 
+		background: url(img/socials/twitter.png) no-repeat; }
+	.social-buttons .facebook { height:22px; width:54px; 
+		background: url(img/socials/facebook-send.png) no-repeat; }
+	.social-buttons .google{ position: absolute; top: -2px; padding-left:5px;}
+	.social-buttons li a span{ 
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" 
+		filter:alpha(opacity=0);
+		-moz-opacity: 0;
+		opacity: 0; 
+	}
+
+	#social1{ padding-left: 0;}
+	#social1 span{padding-top:3px;}
+	#social1 ul {left:-60px;}
+	#social1 li:first-child{padding-bottom:7px;}
+	#social1 .twitter,
+	/*#social1 .facebook,*/
+	#social1 .google{position:absolute;}
+	#social1 .facebook{ background:none; }
+	#social1 .twitter{ top:2px; background:none; }
+	#social1 .google{ left:132px; top:0; }
+        
+        /* added Mike 5.18.12 - shim for layout issue with single video */
+        .single-video .social {  margin-bottom: 18px; }
+
+	[class*="column"] + [class*="column"]:last-child {
+		float: left;
+	}
+	#footer_disclaimers{font-size: 11px; color: #3F4042; margin-top:50px;}
+
+	/* -----------------------------------------
+	  :: Nav Contros On/Off 
+	  :: Uncomment to Turn off
+	----------------------------------------- */
+	/*#site_nav .es-nav{ display:none; }*/
+	body.test-featured .video-gallery .es-nav,
+	body.featured .video-gallery .es-nav,
+	body.okgo .video-gallery .es-nav,
+	body.kickflip .video-gallery .es-nav,
+	body.bungee .video-gallery .es-nav,
+	body.skydive .video-gallery .es-nav{ display: none; }
+
+/*	body.test-featured .video-gallery .es-carousel-wrapper,*/
+	body.featured .video-gallery .es-carousel-wrapper,
+	body.okgo .video-gallery .es-carousel-wrapper,
+  body.skydive .video-gallery .es-carousel-wrapper{ padding:13px 17px;/*If there are few to many thumbs*/ }
+	body.anthem section#social2,
+	body.claw section#social2{ padding-bottom:24px; }
+
+	/* -----------------------------------------
+	  :: Chevy mrm Header / Footer  
+	----------------------------------------- */
+	#nav-container{ margin-bottom:0; }
+
