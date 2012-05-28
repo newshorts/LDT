@@ -4,7 +4,7 @@ $body_class = 'featured';
 $name       = 'NIGHT SWIM';
 ?>
 <?php include("includes/_header.php"); ?>
-	<div id="video1" class="mod-wrapper single-video gallery">
+<!--	<div id="video1" class="mod-wrapper single-video gallery">
 		<header class="row">
 			<ul>
 				<li><?= $page_title ?></li>
@@ -36,8 +36,16 @@ $name       = 'NIGHT SWIM';
                     </section>
                     
 		</div>
-	</div>
+	</div>-->
 	<!-- /Video Gallery -->
+        
+<?php
+
+        include("modules/video/nightswim.php");
+    
+        $v1 = new VideoModule($head1, $intro1, $vids1, $navlinks1);
+        echo $v1->getVideos();
+?>
         
 	<div class="mod-wrapper gallery">
 		<header class="row">

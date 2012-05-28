@@ -4,7 +4,7 @@ $body_class = 'anthem';
 $name       = 'STUNT ANTHEM';
 ?>
 <?php include("includes/_header.php"); ?>
-	<div class="mod-wrapper video-gallery">
+<!--	<div class="mod-wrapper video-gallery">
 		<header class="row">
 			<ul>
 				<li><?= $page_title ?></li>
@@ -31,8 +31,16 @@ $name       = 'STUNT ANTHEM';
 				</ul>
 			</section>
 		</div>
-	</div>
+	</div>-->
 	<!-- /Video Gallery -->
+        
+<?php
+
+        include("modules/video/anthem.php");
+    
+        $v1 = new VideoModule($head1, $intro1, $vids1, $navlinks1);
+        echo $v1->getVideos();
+?>
 
 	<!-- SiteCatalyst code version: H.22.1.
 	Copyright 1996-2011 Adobe, Inc. All Rights Reserved

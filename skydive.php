@@ -5,7 +5,7 @@ $name       = 'SKYDIVE';
 ?>
 <?php include("includes/_header.php"); ?>
 </script>
-<div class="mod-wrapper video-gallery">
+<!--<div class="mod-wrapper video-gallery">
 		<header class="row">
 			<ul>
 				<li><?= $page_title ?></li>
@@ -47,7 +47,7 @@ $name       = 'SKYDIVE';
 				<nav id="vidCarousel" class="es-carousel-wrapper">
 					<div class="es-carousel">
 						<ul class="navlinks">
-							<!-- <li class="active"><a href="#1"><img src="assets/images/sky/vidThumb1.png"></a>Skydive 1</li> -->
+							 <li class="active"><a href="#1"><img src="assets/images/sky/vidThumb1.png"></a>Skydive 1</li> 
 							<li class="active"><a href="#1"><img src="assets/images/sky/vidThumb2.png"></a>Sonic Skydive</li>
 							<li><a href="#2"><img src="assets/images/sky/vidThumb3.png"></a>Skydive 1 HD</li>
 							<li><a href="#3"><img src="assets/images/sky/vidThumb4.png"></a>Skydive 2 HD</li>
@@ -58,8 +58,16 @@ $name       = 'SKYDIVE';
 			</div>
 
 		</div>
-	</div>
+	</div>-->
 	<!-- /Video Gallery -->
+        
+<?php
+
+        include("modules/video/skydive.php");
+    
+        $v1 = new VideoModule($head1, $intro1, $vids1, $navlinks1);
+        echo $v1->getVideos();
+?>
 
 	<div class="mod-wrapper photo-gallery">
 		<header class="row">

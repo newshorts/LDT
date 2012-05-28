@@ -17,7 +17,7 @@ class VideoModule {
     private $vLen;
     private $slide = '';
     
-    public function __construct($h, $i, $v, $n) {
+    public function __construct($h, $i, $v, $n = '') {
         $this->head = $h;
         $this->intro = $i;
         $this->videosArr = $v;
@@ -51,6 +51,18 @@ class VideoModule {
         
         $id = 'xyz-' . strval(rand(999, 99999));
         
+        if($this->navlinks != '') {
+            $tmpNavLinks = <<<NAV_LINKS
+          
+                    <nav class="video-nav es-carousel-wrapper $this->slide">
+                        <div class="es-carousel">
+                            $this->navlinks
+                        </div>
+                    </nav>
+            
+NAV_LINKS;
+        }
+        
         $output = <<<VIDEO_MODULE_OUTPUT
 
         <div id="$id" class="mod-wrapper video-module photo-gallery">
@@ -76,11 +88,8 @@ class VideoModule {
                         </ul>
                     </section>
                     
-                    <nav class="video-nav es-carousel-wrapper $this->slide">
-                        <div class="es-carousel">
-                            $this->navlinks
-                        </div>
-                    </nav>
+                    $tmpNavLinks
+                        
 		</div>
 	</div>
 	<!-- /Video Gallery -->

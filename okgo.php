@@ -4,7 +4,7 @@ $body_class = 'okgo';
 $name       = 'OKGO';
 ?>
 <?php include("includes/_header.php"); ?>
-	<div class="mod-wrapper video-gallery">
+<!--	<div class="mod-wrapper video-gallery">
 		<header class="row">
 			<ul>
 				<li><?= $page_title ?></li>
@@ -52,8 +52,15 @@ $name       = 'OKGO';
 				</nav>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!-- /Video Gallery -->
+<?php
+
+        include("modules/video/okgo.php");
+    
+        $v1 = new VideoModule($head1, $intro1, $vids1, $navlinks1);
+        echo $v1->getVideos();
+?>
 
 	<div class="mod-wrapper photo-gallery">
 		<header class="row">
